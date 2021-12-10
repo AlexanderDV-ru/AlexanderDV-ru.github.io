@@ -46,16 +46,23 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <h1 id="project_title">AlexanderDV-ru.github.io</h1>
+          <script>
+               function changeLang(cur){
+                   for(let lang of ["ru","en"])
+                      for(let e of document.getElementsByTagName(lang))
+                          e.setVisible(lang==cur)
+               }
+          </script>
+          <h1 id="project_title">AlexanderDV-ru.github.io</h1><button onclick="changeLang('en')">En</button><button onclick="changeLang('ru')">Ru</button>
           <h2 id="project_tagline"></h2>
         </header>
     </div>
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+      <section id="main_content" class="inner" style="position: relative;max-width: 1000px;padding: 20px 10px;margin: 0 auto;">
         <h2 id="my-dev-site">My dev site</h2>
-<div>Пишу на заказ джаваскрипты и майнкрафт плагины/I write to order short scripts and minecraft plugins (AlexanderDV.ru@gmai.com)</div>
-<div>Ради интереса, тренировки и решения моих проблем/For fun, training and solving my problems - <a href="https://github.com/AlexanderDV-ru">Java, JS/HTML/CSS, Unity/C#</a></div>
+<div><ru>Пишу на заказ джаваскрипты и майнкрафт плагины</ru><sp>/</sp><en>I write to order short scripts and minecraft plugins</en> - <a href="mailto:AlexanderDV.ru@gmai.com">AlexanderDV.ru@gmai.com</a></div>
+          <div><ru>Ради интереса, тренировки и решения моих проблем</ru><sp>/</sp><en>For fun, training and solving my problems</en> - <a href="https://github.com/AlexanderDV-ru">Java, JS/HTML/CSS, Unity/C#</a></div>
 <!--
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
