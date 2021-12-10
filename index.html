@@ -46,15 +46,6 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <script>
-               function changeLang(cur){
-                   let langs=["ru","en","sp"]
-                   for(let lang of langs)
-                      for(let e of document.getElementsByTagName(lang))
-                          e.style.display=(lang==(langs.includes(cur)?cur:"en")?'':'none')
-               }
-              changeLang((window.navigator ? (window.navigator.language ||window.navigator.systemLanguage ||window.navigator.userLanguage) : "").substr(0, 2).toLowerCase())
-          </script>
           <h1 id="project_title">AlexanderDV-ru.github.io</h1><button onclick="changeLang('en')">En</button><button onclick="changeLang('ru')">Ru</button>
           <h2 id="project_tagline"></h2>
         </header>
@@ -112,6 +103,15 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
       </footer>
     </div>
   
+          <script>
+               function changeLang(cur){
+                   let langs=["ru","en","sp"]
+                   for(let lang of langs)
+                      for(let e of document.getElementsByTagName(lang))
+                          e.style.display=(lang==(langs.includes(cur)?cur:"en")?'':'none')
+               }
+              changeLang((window.navigator ? (window.navigator.language ||window.navigator.systemLanguage ||window.navigator.userLanguage) : "").substr(0, 2).toLowerCase())
+          </script>
 
 </body>
 </html>
