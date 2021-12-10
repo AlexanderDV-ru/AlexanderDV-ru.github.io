@@ -48,11 +48,10 @@
         <header class="inner">
           <script>
                function changeLang(cur){
-                   if(!["ru","en","/"].contains(cur))
-                       cur="en"
-                   for(let lang of ["ru","en","/"])
+                   let langs=["ru","en","sp"]
+                   for(let lang of langs)
                       for(let e of document.getElementsByTagName(lang))
-                          e.style.display=(lang==cur?'':'none')
+                          e.style.display=(lang==(langs.contains(cur)?cur:"en")?'':'none')
                }
               changeLang((window.navigator ? (window.navigator.language ||window.navigator.systemLanguage ||window.navigator.userLanguage) : "").substr(0, 2).toLowerCase())
           </script>
