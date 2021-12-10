@@ -48,10 +48,13 @@
         <header class="inner">
           <script>
                function changeLang(cur){
+                   if(!["ru","en","/"].contains(cur))
+                       cur="en"
                    for(let lang of ["ru","en","/"])
                       for(let e of document.getElementsByTagName(lang))
                           e.style.display=(lang==cur?'':'none')
                }
+              changeLang((window.navigator ? (window.navigator.language ||window.navigator.systemLanguage ||window.navigator.userLanguage) : "").substr(0, 2).toLowerCase())
           </script>
           <h1 id="project_title">AlexanderDV-ru.github.io</h1><button onclick="changeLang('en')">En</button><button onclick="changeLang('ru')">Ru</button>
           <h2 id="project_tagline"></h2>
